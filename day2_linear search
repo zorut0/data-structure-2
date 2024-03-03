@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+  int arr[100],n,i,search,count=0;
+  printf("Enter size of an array: ");
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+    scanf("%d",&arr[i]);
+  }
+  printf("\nEnter element to search: ");
+  scanf("%d",&search);
+  for(i=0;i<n;i++)
+  {
+    if(search==arr[i])
+    {
+      count=1;
+      break;
+    }
+  }
+  if(count==1)
+  {
+    printf("\nElement found");
+  }
+  else
+  {
+    printf("\nNot found");
+  }
+  printf("\nRgNo: 192325031");
+}
