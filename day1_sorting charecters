@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int cmp_asc(const void *a, const void *b)
+{
+ return (*(char*)a - *(char*)b);
+}
+int cmp_desc(const void *a, const void *b)
+
+{
+ return (*(char*)b - *(char*)a);
+}
+int main()
+{
+ char str[100];
+ printf("Enter a string of characters (numbers and alphabets): ");
+ scanf("%s", str);
+ int len = strlen(str);
+ qsort(str, len, sizeof(char), cmp_asc);
+ printf("Ascending Order: %s\n", str);
+ qsort(str, len, sizeof(char), cmp_desc);
+ printf("Descending Order: %s\n", str);
+ printf("\nRgNo: 192325031");
+ return 0;
+}
